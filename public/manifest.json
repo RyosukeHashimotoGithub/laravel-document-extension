@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Laradoc",
+  "version": "1.0.0",
+  "description": "開発中のLaravelのバージョンにリダイレクト",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://readouble.com/laravel/*",
+        "https://readouble.com/laravel/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ]
+}
